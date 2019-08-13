@@ -23,8 +23,7 @@ and full featured. Interceptors can be used easily and has a similar api to OkHt
 get more complex as apps get more interesting. 
 
 #### Providers
-A set of classes that manage the GET, PUT, POST, DELETE, Etc. These are usually pretty straightforward and do not do a log of business logic. In general
-Providers are the only class type that talks to the ApiService. Providers can also talk to [SharePreferences](https://pub.dev/packages/shared_preferences) or other sources of data. 
+A set of classes that manage the GET, PUT, POST, DELETE, etc. These are usually pretty straightforward and do not do a lot of business logic. In general Providers are the only class type that talks to the ApiService. Providers can also talk to [SharePreferences](https://pub.dev/packages/shared_preferences) or other sources of data. 
 
 #### Repositories
 A set of classes that talk to the providers. Repositories may talk to several providers to produce a set of data that the BLOCs can make useful. A repository may 
