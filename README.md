@@ -53,3 +53,4 @@ Out of the box features supported are:
 *  Localization
 *  Photos show up if you have added your api key
 *  General idea of how to handle errors in BLOC
+*  Loads photos from Pixabay
