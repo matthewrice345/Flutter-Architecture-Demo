@@ -69,6 +69,20 @@ class _PhotosPageState extends State<PhotosPage> {
                   }
                 );
               }
+
+              if(state is Error) {
+                return Material(
+                  child: Center(child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.error_outline, size: 90),
+                      Container(height: 16),
+                      Text("Did you forget to add your api key?")
+                    ],
+                  ))
+                );
+              }
               
               // Default state if not handled above, maybe show an explosion gif
               return Material();

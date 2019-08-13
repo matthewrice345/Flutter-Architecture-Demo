@@ -29,6 +29,7 @@ class ApiService {
   Dio get dio => _dio();
   Dio _dio() {
     final options = BaseOptions(
+      baseUrl: _env.baseUrl,
       connectTimeout: _timeout,
       receiveTimeout: _timeout,
       //TODO: add any headers here if desired
@@ -54,18 +55,14 @@ class ApiService {
 
 class _Prod extends Environment {
   @override EnvironmentType get type => EnvironmentType.PROD;
-  @override String get baseImageUrl => "https://pixabay.com/api/";
-  @override String get baseUserUrl => "https://pixabay.com/users/";
-  @override String get baseVideoUrl => "https://pixabay.com/api/videos/";
+  @override String get baseUrl => "https://pixabay.com";
   //TODO: add your api key here
   @override String get apiKey => "add your api key here";
 }
 
 class _Dev extends Environment {
   @override EnvironmentType get type => EnvironmentType.DEV;
-  @override String get baseImageUrl => "https://pixabay.com/api/";
-  @override String get baseUserUrl => "https://pixabay.com/users/";
-  @override String get baseVideoUrl => "https://pixabay.com/api/videos/";
+  @override String get baseUrl => "https://pixabay.com";
   //TODO: add your api key here
   @override String get apiKey => "add your api key here";
 }

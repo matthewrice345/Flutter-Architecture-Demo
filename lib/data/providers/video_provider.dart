@@ -23,7 +23,7 @@ class VideoProvider {
     if(order != null) params.append("order", order);
 
     try {
-      final response = await api.dio.get(api.env.baseVideoUrl + "?$params");
+      final response = await api.dio.get("/api/videos?$params");
       return ApiResponse.success(response);
     } catch(e) {
       return ApiResponse.failure(e, message: "Failed to get videos");
@@ -40,7 +40,7 @@ class VideoProvider {
     if(order != null) params.append("order", order);
 
     try {
-      final response = await api.dio.get(api.env.baseVideoUrl + "?$params");
+      final response = await api.dio.get("/api/videos?$params");
       return ApiResponse.success(response);
     } catch(e) {
       return ApiResponse.failure(e, message: "Failed to search videos");

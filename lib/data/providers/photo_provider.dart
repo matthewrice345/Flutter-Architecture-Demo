@@ -23,7 +23,7 @@ class PhotoProvider {
     if(order != null) params.append("order", order);
 
     try {
-      final response = await api.dio.get(api.env.baseImageUrl + "?$params");
+      final response = await api.dio.get("/api?$params");
       return ApiResponse.success(response);
     } catch(e) {
       return ApiResponse.failure(e, message: "Failed to get photos");
@@ -40,7 +40,7 @@ class PhotoProvider {
     params.append("q", query);
 
     try {
-      final response = await api.dio.get(api.env.baseImageUrl + "?$params");
+      final response = await api.dio.get("/api?$params");
       return ApiResponse.success(response);
     } catch(e) {
       return ApiResponse.failure(e, message: "Failed to get photos by category");
@@ -57,7 +57,7 @@ class PhotoProvider {
     if(order != null) params.append("order", order);
 
     try {
-      final response = await api.dio.get(api.env.baseImageUrl + "?$params");
+      final response = await api.dio.get("/api?$params");
       return ApiResponse.success(response);
     } catch(e) {
       return ApiResponse.failure(e, message: "Failed to search photos");
