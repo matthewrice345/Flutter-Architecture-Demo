@@ -15,12 +15,6 @@ This is not intended to be a full featured application.
 
 ## Key concepts
 
-*  ApiService
-*  Providers
-*  Repositories
-*  Bloc
-*  UI
-
 Each layer only talks to the outer layer and UI is separated between [BLOCs](https://felangel.github.io/bloc/#/) and Widgets.
 
 #### Api Service
