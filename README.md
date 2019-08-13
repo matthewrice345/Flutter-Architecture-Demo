@@ -11,6 +11,7 @@ add your api key to the **ApiService.dart** class.
 
 This is not intended to be a full featured application. 
 
+[[https://github.com/matthewrice345/Flutter-Architecture-Demo/master/screenshot.jpg|alt=screenshot]]
 
 ## Key concepts
 
