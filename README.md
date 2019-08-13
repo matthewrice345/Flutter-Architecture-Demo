@@ -7,7 +7,7 @@ A Flutter application to demo scalable architecture.
 This project is a sample application that demonstrates a scalable architecture. 
 
 The example application points the the [Pixabay](https://pixabay.com/service/about/api/) api. To run the application successfully
-add your api key to the **ApiService.dart** class. 
+add your api key to the [ApiService.dart](https://github.com/matthewrice345/Flutter-Architecture-Demo/blob/master/lib/data/api/api_service.dart) class. 
 
 This is not intended to be a full featured application. 
 
