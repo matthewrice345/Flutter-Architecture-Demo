@@ -2,11 +2,6 @@ import 'package:architecture_demo/data/api/environment.dart';
 import 'package:architecture_demo/data/api/interceptors.dart';
 import 'package:dio/dio.dart';
 
-final environmentTypes = <EnvironmentType>[
-  EnvironmentType.PROD,
-  EnvironmentType.DEV
-];
-
 class ApiService {
 
   static ApiService _instance;
