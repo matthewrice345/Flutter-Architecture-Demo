@@ -64,8 +64,11 @@ class PhotosBloc extends Bloc<PhotosEvent, PhotosState> {
         yield Loading();
 
         final response = await photoRepository.getPhotos(page: event.page);
-
-        yield Loaded(photos: response.hits, totalPhotosCount: response.totalHits);
+        if(response == null) {
+          yield Error(message: Strings().photoLoadError);
+        } else {
+          yield Loaded(photos: response.hits, totalPhotosCount: response.totalHits);
+        }
       } catch (e) {
         yield Error(message: Strings().photoLoadError);
       }
